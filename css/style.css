@@ -4,12 +4,59 @@ body{
 table{
     width: 100%;
     height: 90vh;
+    border-spacing: 3px;
+    border-collapse: separate;
+    padding: 20px;
 }
 td{
-    background: yellow;
+    border: 2px solid;
+    border-radius: 20px;
     text-align: center;
 }
 .eje{
     background: none;
     height: 1vh;
+    border: none;
 }
+
+/* Colores de celdas */
+#cell1-1{background-color: #e93224;}
+#cell1-2{background-color: #e93f26;}
+#cell1-3{background-color: #e95329;}
+#cell1-4{background-color: #ec692e;}
+#cell1-5{background-color: #ef8132;}
+#cell1-6{background-color: #f4b740;}
+#cell1-7{background-color: #f4c143;}
+#cell1-8{background-color: #f6d047;}
+#cell1-9{background-color: #f5db4b;}
+#cell1-10{background-color: #f3e44e;}
+#cell2-1{background-color: #de3225;}
+#cell2-2{background-color: #d73c26;}
+#cell2-3{background-color: #dc4e28;}
+#cell2-4{background-color: #dd5f2b;}
+#cell2-5{background-color: #dd5f2b;}
+#cell2-6{background-color: #f1b942;}
+#cell2-7{background-color: #efc343;}
+#cell2-8{background-color: #eec845;}
+#cell2-9{background-color: #efd548;}
+#cell2-10{background-color: #f0dd4b;}
+#cell3-1{background-color: #c93025;}
+#cell3-2{background-color: #ca3b25;}
+#cell3-3{background-color: #ca4627;}
+#cell3-4{background-color: #ca562d;}
+#cell3-5{background-color: #d16230;}
+#cell3-6{background-color: #e8b841;}
+#cell3-7{background-color: #eabe44;}
+#cell3-8{background-color: #ecc746;}
+#cell3-9{background-color: #ebcd47;}
+#cell3-10{background-color: #e8d547;}
+#cell4-1{background-color: #c13028;}
+#cell4-2{background-color: #c23829;}
+#cell4-3{background-color: #c0442b;}
+#cell4-4{background-color: #bf4d2b;}
+#cell4-5{background-color: #c3552e;}
+#cell4-6{background-color: #e6b942;}
+#cell4-7{background-color: #e8bc43;}
+#cell4-8{background-color: #e5c244;}
+#cell4-9{background-color: #e5c846;}
+#cell4-10{background-color: #e6ce48;}
