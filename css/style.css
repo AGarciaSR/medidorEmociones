@@ -16,12 +16,24 @@ td:not(.eje){
     text-align: center;
     filter: brightness(0.5);
 }
-td:not(.eje):hover{
+td:not(.eje):hover, td.selected{
     filter: brightness(1);
 }
 .eje{
     height: 1vh;
     border: none;
+}
+#contLogoMedidor{
+    text-align: center;
+}
+#contLogoMedidor button{
+    transition-duration: 1s;
+    background-color: #ff3d29;
+    color: white;
+}
+#contLogoMedidor button:hover{
+    background-color: #f7119e;
+    border: 1px solid white;
 }
 
 /* Colores de celdas */
