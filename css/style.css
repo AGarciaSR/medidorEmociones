@@ -7,6 +7,9 @@ table{
 }
 td{
     background: yellow;
-    width: 9.09%;
-    height: 9.09%;
+    text-align: center;
+}
+.eje{
+    background: none;
+    height: 1vh;
 }
