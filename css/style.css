@@ -1,4 +1,5 @@
 body{
+    padding: 1%;
     background-color: #333333;
 }
 table{
@@ -8,13 +9,17 @@ table{
     border-collapse: separate;
     padding: 20px;
 }
-td{
+td:not(.eje){
+    cursor: pointer;
     border: 2px solid;
     border-radius: 20px;
     text-align: center;
+    filter: brightness(0.5);
+}
+td:not(.eje):hover{
+    filter: brightness(1);
 }
 .eje{
-    background: none;
     height: 1vh;
     border: none;
 }
