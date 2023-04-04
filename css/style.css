@@ -26,14 +26,22 @@ td:not(.eje):hover, td.selected{
 #contLogoMedidor{
     text-align: center;
 }
+#contLogoMedidor img{
+    width: 100%;
+}
 #contLogoMedidor button{
-    transition-duration: 1s;
+    transition-duration: 0.5s;
     background-color: #ff3d29;
     color: white;
 }
 #contLogoMedidor button:hover{
     background-color: #f7119e;
     border: 1px solid white;
+}
+
+@media screen and (max-width: 768px) {
+    .desktop{display: none;}
+    #contLogoMedidor img{width: 40%;}
 }
 
 /* Colores de celdas */

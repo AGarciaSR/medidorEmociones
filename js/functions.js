@@ -18,5 +18,6 @@ function readjustSizes(){
 }
 function seleccionaCelda(id){
     $("td").removeClass("selected");
+    $("#contLogoMedidor button").removeClass("visually-hidden");
     $("td#"+id).addClass("selected");
 }
