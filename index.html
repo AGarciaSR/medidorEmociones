@@ -9,152 +9,18 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
         <link rel="stylesheet" href="./css/style.css">
         <script src="./js/functions.js"></script>
     </head>
 
     <body>
+        <div id="fondo"></div>
         <div class="container-fluid">
-            <div class="row">
-                <div id="contLogoMedidor" class="col-md-2">
-                    <img src="./img/logoMedidor_white.png" alt=""><br>
-                    <button type="button" class="btn visually-hidden">Confirmar</button>
-                </div>
-                <div class="col-md-10">
-                    <div class="row">
-                        <div class="col-md-10"></div>
-                        <div class="col-md-2">
-                            <a href="https://grupoaporte.com" target="_blank" class="desktop">
-                                <img src="./img/logoAporte_white.png" alt="" style="width:100%;">
-                            </a>
-                        </div>
-                    </div>
-                    <table class="table table-bordered">
-                        <tr>
-                            <td rowspan="11" class="eje"><img id="ejeY" src="./img/ejeY.png" alt=""></td>
-                            <td id="cell1-1"><br></td>
-                            <td id="cell1-2"><br></td>
-                            <td id="cell1-3"><br></td>
-                            <td id="cell1-4"><br></td>
-                            <td id="cell1-5"><br></td>
-                            <td id="cell1-6"><br></td>
-                            <td id="cell1-7"><br></td>
-                            <td id="cell1-8"><br></td>
-                            <td id="cell1-9"><br></td>
-                            <td id="cell1-10"><br></td>
-                        </tr>
-                        <tr>
-                            <td id="cell2-1"><br></td>
-                            <td id="cell2-2"><br></td>
-                            <td id="cell2-3"><br></td>
-                            <td id="cell2-4"><br></td>
-                            <td id="cell2-5"><br></td>
-                            <td id="cell2-6"><br></td>
-                            <td id="cell2-7"><br></td>
-                            <td id="cell2-8"><br></td>
-                            <td id="cell2-9"><br></td>
-                            <td id="cell2-10"><br></td>
-                        </tr>
-                        <tr>
-                            <td id="cell3-1"><br></td>
-                            <td id="cell3-2"><br></td>
-                            <td id="cell3-3"><br></td>
-                            <td id="cell3-4"><br></td>
-                            <td id="cell3-5"><br></td>
-                            <td id="cell3-6"><br></td>
-                            <td id="cell3-7"><br></td>
-                            <td id="cell3-8"><br></td>
-                            <td id="cell3-9"><br></td>
-                            <td id="cell3-10"><br></td>
-                        </tr>
-                        <tr>
-                            <td id="cell4-1"><br></td>
-                            <td id="cell4-2"><br></td>
-                            <td id="cell4-3"><br></td>
-                            <td id="cell4-4"><br></td>
-                            <td id="cell4-5"><br></td>
-                            <td id="cell4-6"><br></td>
-                            <td id="cell4-7"><br></td>
-                            <td id="cell4-8"><br></td>
-                            <td id="cell4-9"><br></td>
-                            <td id="cell4-10"><br></td>
-                        </tr>
-                        <tr>
-                            <td id="cell5-1"><br></td>
-                            <td id="cell5-2"><br></td>
-                            <td id="cell5-3"><br></td>
-                            <td id="cell5-4"><br></td>
-                            <td id="cell5-5"><br></td>
-                            <td id="cell5-6"><br></td>
-                            <td id="cell5-7"><br></td>
-                            <td id="cell5-8"><br></td>
-                            <td id="cell5-9"><br></td>
-                            <td id="cell5-10"><br></td>
-                        </tr>
-                        <tr>
-                            <td id="cell6-1"><br></td>
-                            <td id="cell6-2"><br></td>
-                            <td id="cell6-3"><br></td>
-                            <td id="cell6-4"><br></td>
-                            <td id="cell6-5"><br></td>
-                            <td id="cell6-6"><br></td>
-                            <td id="cell6-7"><br></td>
-                            <td id="cell6-8"><br></td>
-                            <td id="cell6-9"><br></td>
-                            <td id="cell6-10"><br></td>
-                        </tr>
-                        <tr>
-                            <td id="cell7-1"><br></td>
-                            <td id="cell7-2"><br></td>
-                            <td id="cell7-3"><br></td>
-                            <td id="cell7-4"><br></td>
-                            <td id="cell7-5"><br></td>
-                            <td id="cell7-6"><br></td>
-                            <td id="cell7-7"><br></td>
-                            <td id="cell7-8"><br></td>
-                            <td id="cell7-9"><br></td>
-                            <td id="cell7-10"><br></td>
-                        </tr>
-                        <tr>
-                            <td id="cell8-1"><br></td>
-                            <td id="cell8-2"><br></td>
-                            <td id="cell8-3"><br></td>
-                            <td id="cell8-4"><br></td>
-                            <td id="cell8-5"><br></td>
-                            <td id="cell8-6"><br></td>
-                            <td id="cell8-7"><br></td>
-                            <td id="cell8-8"><br></td>
-                            <td id="cell8-9"><br></td>
-                            <td id="cell8-10"><br></td>
-                        </tr>
-                        <tr>
-                            <td id="cell9-1"><br></td>
-                            <td id="cell9-2"><br></td>
-                            <td id="cell9-3"><br></td>
-                            <td id="cell9-4"><br></td>
-                            <td id="cell9-5"><br></td>
-                            <td id="cell9-6"><br></td>
-                            <td id="cell9-7"><br></td>
-                            <td id="cell9-8"><br></td>
-                            <td id="cell9-9"><br></td>
-                            <td id="cell9-10"><br></td>
-                        </tr>
-                        <tr>
-                            <td id="cell10-1"><br></td>
-                            <td id="cell10-2"><br></td>
-                            <td id="cell10-3"><br></td>
-                            <td id="cell10-4"><br></td>
-                            <td id="cell10-5"><br></td>
-                            <td id="cell10-6"><br></td>
-                            <td id="cell10-7"><br></td>
-                            <td id="cell10-8"><br></td>
-                            <td id="cell10-9"><br></td>
-                            <td id="cell10-10"><br></td>
-                        </tr>
-                        <tr>
-                            <td colspan="11" class="eje"><img id="ejeX" src="./img/ejeX.png" alt="" style="width:100%;"></td>
-                        </tr>
-                    </table>
+            <div class="row justify-content-center align-items-center principio">
+                <div id="contLogoMedidor" class="col-md-4">
+                    <img class="animate__animated animate__zoomIn" src="./img/logoMedidor_black.png" alt=""><br>
+                    <a href="medicion.html"><button id="comenzar" type="button" class="btn animate__animated animate__fadeIn">Comenzar</button></a>
                 </div>
             </div>
         </div>

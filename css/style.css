@@ -1,6 +1,24 @@
 body{
-    padding: 1%;
     background-color: #333333;
+}
+#fondo{
+    background: url(../img/fondo.jpg) center center;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: -1;
+}
+#medidor{
+    padding: 1%;
+}
+.principio{
+    height: 100vh;
+}
+#comenzar{
+    animation-delay: 1s;
+    transition-duration: 1s !important;
+    font-size: 2em;
 }
 table{
     width: 100%;
