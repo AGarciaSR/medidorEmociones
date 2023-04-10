@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    var celdaElegida;
     readjustSizes();
     $("td").click(function (e) { 
         e.preventDefault();
@@ -17,7 +18,10 @@ function readjustSizes(){
         $("#ejeY").height($("#ejeX").width() / 1);
 }
 function seleccionaCelda(id){
+    celdaElegida = id
     $("td").removeClass("selected");
     $("#contLogoMedidor button").removeClass("visually-hidden");
     $("td#"+id).addClass("selected");
+}
+function enviaEmocion(){ 
 }
