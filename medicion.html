@@ -20,7 +20,7 @@
             <div class="row">
                 <div id="contLogoMedidor" class="col-md-2">
                     <img src="./img/logoMedidor_white.png" alt=""><br>
-                    <button type="button" class="btn visually-hidden" data-bs-toggle="modal" data-bs-target="#modalAccesoCurso" onclick="enviaEmocion()">Confirmar</button>
+                    <button type="button" class="btn visually-hidden" data-bs-toggle="modal" data-bs-target="#modalAccesoCurso" onclick="enviaEmocion()">Ver emoción</button>
                 </div>
                 <div class="col-md-10">
                     <div class="row">
@@ -31,7 +31,9 @@
                             </a>
                         </div>
                     </div>
-                    <table class="table table-bordered">
+                    <p id="textHorizontal" class="hidden" style="color:white;text-align:center;">Para comenzar, coloque su dispositivo en modo horizontal</p>
+                    <p id="textExplicativo">Selecciona el cuadro que más represente tu emoción ahora, considerando tu nivel de Energía y Satisfacción</p>
+                    <table id="tablaEmociones" class="table table-bordered">
                         <tr>
                             <td rowspan="11" class="eje"><img id="ejeY" src="./img/ejeY.png" alt=""></td>
                             <td id="cell1"><br></td>

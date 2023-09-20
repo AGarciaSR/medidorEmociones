@@ -11,12 +11,20 @@ $(window).resize(function() {
     readjustSizes();
 });
 function readjustSizes(){
-    let proportionScreen = $("body").width() / $("body").height();
-    let newDivision = (proportionScreen * 1.7) / 1.93;
-    if($("body").width()>768)
-        $("#ejeY").height($("#ejeX").width() / newDivision);
-    else
-        $("#ejeY").height($("#ejeX").width() / 1);
+    if($(window).width()<$(window).height()){
+        $("#comenzar, #tablaEmociones, #textExplicativo").addClass("hidden");
+        $("#textHorizontal").removeClass("hidden");
+    }
+    else{
+        $("#comenzar, #tablaEmociones, #textExplicativo").removeClass("hidden");
+        $("#textHorizontal").addClass("hidden");
+        let proportionScreen = $(window).width() / $(window).height();
+        let newDivision = (proportionScreen * 1.9) / 2.1;
+        if($(window).width()>768)
+            $("#ejeY").height($(window).height() / 1.216);
+        else
+            $("#ejeY").height($("#ejeX").width() / 1);
+    }
 }
 function seleccionaCelda(id){
     celdaElegida = id
@@ -25,5 +33,12 @@ function seleccionaCelda(id){
     $("td#"+id).addClass("selected");
 }
 function enviaEmocion(){
-    $("#nombre").html(emociones[celdaElegida.substring(4)-1])
+    $("#nombre").html(emociones[celdaElegida.substring(4)-1]);
+    if($(window).width()>768){
+        var celda = 1;
+        for(var i=0;i<emociones.length;i++){
+            $("#cell"+celda).html(emociones[i]);
+            celda++;
+        }
+    }
 }

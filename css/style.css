@@ -33,6 +33,11 @@ td:not(.eje){
     border-radius: 20px;
     text-align: center;
     filter: brightness(0.5);
+    border-color: black;
+    color: white;
+    font-weight: bold;
+    width: 10%;
+    max-width: 10%;
 }
 td:not(.eje):hover, td.selected{
     filter: brightness(1);
@@ -63,9 +68,19 @@ td:not(.eje):hover, td.selected{
 #resultado #explicacion{
     text-align: justify;
 }
+#textExplicativo{
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+.hidden{
+    display:none;
+}
+
 @media screen and (max-width: 768px) {
     .desktop{display: none;}
-    #contLogoMedidor img{width: 40%;}
+    #contLogoMedidor img{width: 24%;}
+    #textExplicativo{margin-top: 1em;}
 }
 
 /* Colores de celdas */
