@@ -12,27 +12,32 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="./css/style.css">
+        <script src="./js/data.js"></script>
         <script src="./js/functions.js"></script>
     </head>
 
     <body>
         <div id="medidor" class="container-fluid">
-            <div class="row">
-                <div id="contLogoMedidor" class="col-md-2">
-                    <img src="./img/logoMedidor_white.png" alt=""><br>
-                    <button type="button" class="btn visually-hidden" data-bs-toggle="modal" data-bs-target="#modalAccesoCurso" onclick="enviaEmocion()">Ver emoción</button>
+            <div class="row justify-content-center">
+                <div class="col-1 col-md-1">
                 </div>
-                <div class="col-md-10">
-                    <div class="row">
-                        <div class="col-md-10"></div>
-                        <div class="col-md-2">
-                            <a href="https://grupoaporte.com" target="_blank" class="desktop">
-                                <img src="./img/logoAporte_white.png" alt="" style="width:100%;">
-                            </a>
-                        </div>
-                    </div>
+                <div id="contLogoMedidor" class="col-2 col-md-2 align-self-center">
+                    <img src="./img/logoHorizontal_white.png" class="desktop" alt=""><br>
+                    <!--<button type="button" class="btn visually-hidden" data-bs-toggle="modal" data-bs-target="#modalAccesoCurso" onclick="enviaEmocion()">Ver emoción</button>-->
+                </div>
+                <div class="col-6 col-md-6 align-self-center">
                     <p id="textHorizontal" class="hidden" style="color:white;text-align:center;">Para comenzar, coloque su dispositivo en modo horizontal</p>
-                    <p id="textExplicativo">Selecciona el cuadro que más represente tu emoción ahora, considerando tu nivel de Energía y Satisfacción</p>
+                    <h2 id="textExplicativo">Selecciona el cuadro que más represente tu emoción ahora, considerando tu nivel de Energía y Satisfacción</h2>
+                </div>
+                <div class="col-2 col-md-2 align-self-center">
+                    <a href="https://grupoaporte.com" target="_blank" class="desktop"><img src="./img/logoAporte_white.png" alt="" style="width:100%;"></a>
+                </div>
+                <div class="col-1 col-md-1" style="text-align:center;">
+                    <img id="eyeCells" src="./img/eye_closed.png" class="desktop" alt="" onclick="revelaCeldas()" title="Haz click para ver los nombres de las emociones">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-12">
                     <table id="tablaEmociones" class="table table-bordered">
                         <tr>
                             <td rowspan="11" class="eje"><img id="ejeY" src="./img/ejeY.png" alt=""></td>
@@ -161,28 +166,68 @@
                     </table>
                 </div>
             </div>
-            <div class="modal fade" id="modalAccesoCurso" tabindex="-1" role="dialog" aria-labelledby="tituloModal" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h2 class="modal-title" id="tituloModal">Tu resultado</h2>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body">
-                      Según tu elección en el cuadro, tu emoción se sitúa como:
-                      <div id="resultado">
-                        <h2 id="nombre"></h2>
-                        <span id="explicacion"></span>
-                      </div>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    </div>
-                  </div>
+        </div>
+        <div class="modal fade" id="modalEmocion" tabindex="-1" role="dialog" aria-labelledby="tituloModal" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="tituloModal">Tu resultado</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="visibility:hidden;">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-              </div>
+                <div class="modal-body">
+                    <div id="enablersContainer" class="row justify-content-center">
+                        <div id="part1enabler" class="col-4 col-md-4 enablers align-self-center" onclick="showPart(1)">
+                            <div class="btn">
+                                Emoción<br>y causa
+                            </div>
+                        </div>
+                        <div id="part2enabler" class="col-4 col-md-4 enablers align-self-center" onclick="showPart(2)">
+                            <div class="btn">
+                                Función<br>¿Para qué sirve?
+                            </div>
+                        </div>
+                        <div id="part3enabler" class="col-4 col-md-4 enablers align-self-center" onclick="showPart(3)">
+                            <div class="btn">
+                                Consejos para manejar la emoción
+                            </div>
+                        </div>
+                    </div>
+                    <div id="part1">
+                        <div id="emocion">
+                            <h5>EMOCIÓN <br> ¿Qué estoy sintiendo?</h5>
+                        </div>
+                        <h2 id="nombre"></h2>
+                        <div id="causa">
+                            <h5>CAUSA <br> ¿Por qué lo siento?</h5>
+                        </div>
+                        <div>
+                            <span id="causa-texto"></span>
+                        </div>
+                    </div>
+                    <div id="part2">
+                        <div id="funcion">
+                            <h5>FUNCIÓN <br> ¿Para qué sirve?</h5>
+                        </div>
+                        <div>
+                            <span id="funcion-texto"></span>
+                        </div>
+                    </div>
+                    <div id="part3">
+                        <div id="consejos">
+                            <h5>Consejos para manejar la emoción</h5>
+                        </div>
+                        <div>
+                            <span id="consejos-texto"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+                </div>
+            </div>
         </div>
     </body>
 

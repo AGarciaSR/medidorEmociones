@@ -18,7 +18,7 @@ body{
 #comenzar{
     animation-delay: 1s;
     transition-duration: 1s !important;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 table{
     width: 100%;
@@ -29,6 +29,7 @@ table{
 }
 td:not(.eje){
     cursor: pointer;
+    align-content: center;
     border: 2px solid;
     border-radius: 20px;
     text-align: center;
@@ -46,7 +47,7 @@ td:not(.eje):hover, td.selected{
     height: 1vh;
     border: none;
 }
-#contLogoMedidor{
+#contLogoMedidor, #nombre{
     text-align: center;
 }
 #contLogoMedidor img{
@@ -64,6 +65,7 @@ td:not(.eje):hover, td.selected{
 #resultado #nombre{
     margin-top: 2%;
     text-align: center;
+    font-weight: bold;
 }
 #resultado #explicacion{
     text-align: justify;
@@ -72,15 +74,43 @@ td:not(.eje):hover, td.selected{
     color: white;
     text-align: center;
     font-weight: bold;
+    font-size: 1.7vw;
 }
 .hidden{
     display:none;
 }
+#eyeCells{
+    width:60%;
+    filter: invert(1);
+    cursor: pointer;
+}
+#emocion,#causa,#funcion,#consejos{
+    background-color: #f99a48;
+    padding: 1em;
+    text-align: center;
+    border: 2px solid black;
+    margin: 1em 0;
+}
+.enablers{
+    padding:0;
+}
+.active{
+    background-color:#f99a48 !important;
+}
+.enablers .btn{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid black;
+}
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
     .desktop{display: none;}
-    #contLogoMedidor img{width: 24%;}
-    #textExplicativo{margin-top: 1em;}
+    /*#contLogoMedidor img{width: 24%;}*/
+    #textExplicativo{margin-bottom:0;}
 }
 
 /* Colores de celdas */
